@@ -11,5 +11,7 @@ namespace CVSite.Service
     {
         Task<List<RepositoryPortfolioDto>> GetPortfolioAsync(string userName);
         Task<List<Repository>> SearchRepositoriesAsync(string? repoName = null, string? language = null, string? userName = null);
+        Task<DateTimeOffset?> GetLastUserActivityTime(string userName);
+
     }
 }

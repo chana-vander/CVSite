@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CVSite.Service
 {
-    public class GitHubSettings
+    public class GitHubIntegrationOptions
     {
         public string Token { get; set; }
         public string UserName { get; set; }

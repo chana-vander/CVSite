@@ -51,7 +51,7 @@ namespace CVSite.API.CachServices
             return _gitHubService.SearchRepositoriesAsync(repoName, language, userName);
         }
 
-        private async Task<DateTimeOffset> GetLastUserActivityTime(string userName)
+        public async Task<DateTimeOffset?> GetLastUserActivityTime(string userName)
         {
             var events=await _gitHubClient.Activity.Events.GetAllUserPerformed(userName);
             return events.FirstOrDefault()?.CreatedAt??DateTimeOffset.MinValue;
